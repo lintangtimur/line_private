@@ -35,8 +35,6 @@ def RECEIVE_MESSAGE(op):
     # Check content only text message
     if msg.contentType == 0:
         if text == "gid":
-            # gid = line.getGroupIdsByName('Illuminati Cendol')
-            # line.sendMessage(sender, "Iluminati Cendol gid: {}".format(gid))
             line.getGroups()
             var_dump(line.getProfileDetail(os.environ.get("ADMIN_MID")))
         else:
